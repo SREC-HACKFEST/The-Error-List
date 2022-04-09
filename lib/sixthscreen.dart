@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:gatepass/thirdscreen.dart';
 
 
-class tutorform extends StatefulWidget {
-  const  tutorform({ Key? key }) : super(key: key);
+class HODform extends StatefulWidget {
+  const  HODform({ Key? key }) : super(key: key);
   @override
-  State<tutorform> createState() => _tutorformState();
+  State<HODform> createState() => _HODformState();
 }
 
-class _tutorformState extends State<tutorform> {
+class _HODformState extends State<HODform> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: AppBar(centerTitle: true, title: Text("TUTOR FORM"),backgroundColor: Colors.transparent,
+      appBar: AppBar(centerTitle: true, title: Text("HOD FORM"),backgroundColor: Colors.transparent,
       elevation: 0,),
-      backgroundColor:Color.fromARGB(255, 88, 170, 237),
+      backgroundColor:Color.fromARGB(255, 94, 155, 236),
       body: Container  (
           
           child: ListView(
@@ -32,9 +32,9 @@ class _tutorformState extends State<tutorform> {
                       fillColor: Colors.white,
                       filled: true,
                       border: OutlineInputBorder(),  
-                      labelText: 'NAME OF THE TUTOR',  
+                      labelText: 'NAME OF THE HOD',  
                       labelStyle: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
-                      hintText: 'Enter TUTOR NAME',  
+                      hintText: 'Enter HOD NAME',  
                     ),  
                   ),
                    const Padding(padding: EdgeInsets.all( 10.0 ),),
@@ -53,22 +53,7 @@ class _tutorformState extends State<tutorform> {
                       
                     ),  
                   ), 
-                   const Padding(padding: EdgeInsets.all( 10.0 ),),
-
-                    const  TextField(  
-                    obscureText: true,  
                     
-                    decoration: InputDecoration(  
-                      fillColor: Colors.white,
-                      filled: true,
-                      border: OutlineInputBorder(),  
-                      labelText: 'FORM-TO eg:2005051-2005067',  
-                      labelStyle: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
-                      hintText: 'INCHARGE NUMBER',  
-                      
-                      
-                    ),  
-                  ), 
                   const Padding(padding: EdgeInsets.all( 10.0 ),),
 
                     const  TextField(  

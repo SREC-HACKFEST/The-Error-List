@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:gatepass/fourthscreen.dart';
+import 'package:gatepass/fifthscreen.dart';
+import 'package:gatepass/sixthscreen.dart';
+import 'package:gatepass/sevenscreen.dart';
 class Third extends StatelessWidget {
   const Third({ Key? key }) : super(key: key);
 
@@ -29,7 +33,7 @@ class Third extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(16),
                     child: ElevatedButton( child: Text("Tutor"),onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Third()),
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => tutorform()),
                       );},
                     style: ElevatedButton.styleFrom(primary: Color.fromARGB(255, 88, 170, 237),padding: EdgeInsets.all(100.0)
                     ,textStyle: TextStyle(
@@ -45,7 +49,7 @@ class Third extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(8),
                     child: ElevatedButton( child: Text("A/c"),onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Third()),
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => Acform()),
                       );},
                     style: ElevatedButton.styleFrom(primary: Color.fromARGB(255, 233, 81, 70),padding: EdgeInsets.all(100.0)
                     ,textStyle: TextStyle(
@@ -61,9 +65,9 @@ class Third extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(8),
                     child: ElevatedButton( child: Text("HOD"),onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Third()),
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => HODform()),
                       );},
-                    style: ElevatedButton.styleFrom(primary: Color.fromARGB(255, 233, 81, 70),padding: EdgeInsets.all(100.0)
+                    style: ElevatedButton.styleFrom(primary: Color.fromARGB(255, 88, 170, 237),padding: EdgeInsets.all(100.0)
                     ,textStyle: TextStyle(
                       color: Colors.black,fontWeight: FontWeight.bold
                     )
@@ -77,7 +81,7 @@ class Third extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(8),
                     child: ElevatedButton( child: Text("Warden"),onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Third()),
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => wardenform()),
                       );},
                     style: ElevatedButton.styleFrom(primary: Color.fromARGB(255, 233, 81, 70),padding: EdgeInsets.all(100.0)
                     ,textStyle: TextStyle(

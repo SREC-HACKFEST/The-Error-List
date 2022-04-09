@@ -1,38 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:gatepass/firstscreen.dart';
-import 'package:gatepass/firstscreensignup.dart';
-import 'package:gatepass/forgetscreen.dart';
+import 'package:gatepass/thirdscreen.dart';
 
 
-void main(){
-  runApp(Myapp());
-}
-
-class Myapp extends StatelessWidget{
-  
+class wardenform extends StatefulWidget {
+  const  wardenform({ Key? key }) : super(key: key);
   @override
-  Widget build(BuildContext context) {
-         return MaterialApp(
-           debugShowCheckedModeBanner: false,
-           home: loginpage()
-         );
-  }
-}
-class loginpage extends StatefulWidget {
-  const loginpage({ Key? key }) : super(key: key);
-
-  @override
-  State<loginpage> createState() => _loginpageState();
+  State<wardenform> createState() => _wardenformState();
 }
 
-class _loginpageState extends State<loginpage> {
+class _wardenformState extends State<wardenform> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: AppBar(centerTitle: true, title: Text("SREC HOSTEL APP"),backgroundColor: Colors.transparent,
+      appBar: AppBar(centerTitle: true, title: Text("Warden FORM"),backgroundColor: Colors.transparent,
       elevation: 0,),
-      backgroundColor:Color.fromARGB(255, 140, 228, 143),
+      backgroundColor:Color.fromARGB(255, 228, 64, 64),
       body: Container  (
           
           child: ListView(
@@ -49,9 +32,9 @@ class _loginpageState extends State<loginpage> {
                       fillColor: Colors.white,
                       filled: true,
                       border: OutlineInputBorder(),  
-                      labelText: 'Username',  
+                      labelText: 'NAME OF THE Warden',  
                       labelStyle: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
-                      hintText: 'Enter Username',  
+                      hintText: 'Enter Warden NAME',  
                     ),  
                   ),
                    const Padding(padding: EdgeInsets.all( 10.0 ),),
@@ -63,47 +46,46 @@ class _loginpageState extends State<loginpage> {
                       fillColor: Colors.white,
                       filled: true,
                       border: OutlineInputBorder(),  
-                      labelText: 'Password',  
+                      labelText: 'EMAIL_ID',  
                       labelStyle: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
-                      hintText: 'Enter Password',  
+                      hintText: 'Enter  EMAIL_ID',  
                       
                       
                     ),  
                   ), 
+                    
+                  
+                  
                   const Padding(padding: EdgeInsets.all( 10.0 ),),
-                  TextButton(
-                    child: const Text('Forgot Password',),
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => forgetscreen() ),);
-              },
-              
-              
-            ),
-            
-            
+
+                    const  TextField(  
+                    obscureText: true,  
+                    
+                    decoration: InputDecoration(  
+                      fillColor: Colors.white,
+                      filled: true,
+                      border: OutlineInputBorder(),  
+                      labelText: 'JOIN YEAR',  
+                      labelStyle: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
+                      hintText: 'JOIN YEAR',  
+                      
+                      
+                    ),  
+                  ), 
+                  
               ElevatedButton(
-            child: Text('Login'),
+            child: Text('Submit'),
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => firstscreen() ),);
+              Navigator.push(context, MaterialPageRoute(builder: (context) => Third() ),);
             },
             style: ElevatedButton.styleFrom(
-                primary: Colors.red,
+                primary: Color.fromARGB(255, 62, 235, 76),
                 padding: EdgeInsets.all(5),
                 textStyle: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.bold)),
                 
-               
-                
-              ),
-              TextButton(
-                    child: const Text('Sign UP',),
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => firstscreensignup() ),);
-              },
-              
-              
-            ),],
+),],
           ),
       ),
     );

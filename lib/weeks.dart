@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:gatepass/secondscreen.dart';
-import 'package:gatepass/thirdscreen.dart';
-import 'package:gatepass/weeks.dart';
-
-
-
-class firstscreen extends StatelessWidget {
-  const firstscreen({ Key? key }) : super(key: key);
+import 'package:gatepass/emergency.dart';
+import 'package:gatepass/weekdays.dart';
+import 'package:gatepass/weekend.dart';
+import 'package:gatepass/emergency.dart';
+class weeks extends StatelessWidget {
+  const weeks({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    
-    return Scaffold(
+      return Scaffold(
             
              extendBodyBehindAppBar: true,
-             appBar: AppBar(centerTitle: true, title: Text("PROF OR STUD",),backgroundColor: Colors.transparent,
+             appBar: AppBar(centerTitle: true, title: Text("Catagories",),backgroundColor: Colors.transparent,
              elevation: 0,
              
              ),
@@ -34,9 +31,9 @@ class firstscreen extends StatelessWidget {
               Center(
                 child: SizedBox(
                   child: Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: ElevatedButton( child: Text("STAFF"),onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Third()),
+                    padding: const EdgeInsets.all(16),
+                    child: ElevatedButton( child: Text("Week end"),onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => weekend()),
                       );},
                     style: ElevatedButton.styleFrom(primary: Color.fromARGB(255, 88, 170, 237),padding: EdgeInsets.all(100.0)
                     ,textStyle: TextStyle(
@@ -50,9 +47,9 @@ class firstscreen extends StatelessWidget {
               Center(
                 child: SizedBox(
                   child: Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: ElevatedButton( child: Text("STUDENT"),onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => ((weeks()))),
+                    padding: const EdgeInsets.all(8),
+                    child: ElevatedButton( child: Text("Week days"),onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => weekday()),
                       );},
                     style: ElevatedButton.styleFrom(primary: Color.fromARGB(255, 233, 81, 70),padding: EdgeInsets.all(100.0)
                     ,textStyle: TextStyle(
@@ -62,9 +59,25 @@ class firstscreen extends StatelessWidget {
                     ),),
                   ),
                 ),
-              )
-
+              ),
+              Center(
+                child: SizedBox(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: ElevatedButton( child: Text("Emergency"),onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => emergency()),
+                      );},
+                    style: ElevatedButton.styleFrom(primary: Color.fromARGB(255, 88, 170, 237),padding: EdgeInsets.all(100.0)
+                    ,textStyle: TextStyle(
+                      color: Colors.black,fontWeight: FontWeight.bold
+                    )
+                    
+                    ),),
+                  ),
+                ),
+              ),
               
-            ],)));
+               ],))
+    );
   }
 }

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:gatepass/secondscreen.dart';
 import 'package:gatepass/thirdscreen.dart';
-import 'package:gatepass/weeks.dart';
 
 
 
-class firstscreen extends StatelessWidget {
-  const firstscreen({ Key? key }) : super(key: key);
+class firstscreensignup extends StatelessWidget {
+  const firstscreensignup({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +34,7 @@ class firstscreen extends StatelessWidget {
                 child: SizedBox(
                   child: Padding(
                     padding: const EdgeInsets.all(20.0),
-                    child: ElevatedButton( child: Text("STAFF"),onPressed: (){
+                    child: ElevatedButton( child: Text("Staff"),onPressed: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context) => Third()),
                       );},
                     style: ElevatedButton.styleFrom(primary: Color.fromARGB(255, 88, 170, 237),padding: EdgeInsets.all(100.0)
@@ -51,8 +50,8 @@ class firstscreen extends StatelessWidget {
                 child: SizedBox(
                   child: Padding(
                     padding: const EdgeInsets.all(20.0),
-                    child: ElevatedButton( child: Text("STUDENT"),onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => ((weeks()))),
+                    child: ElevatedButton( child: Text("Student"),onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => ((stuforum()))),
                       );},
                     style: ElevatedButton.styleFrom(primary: Color.fromARGB(255, 233, 81, 70),padding: EdgeInsets.all(100.0)
                     ,textStyle: TextStyle(
